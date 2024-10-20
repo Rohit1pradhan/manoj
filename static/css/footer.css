@@ -1,0 +1,101 @@
+/* General Styles for Footer */
+.footer {
+    padding: 40px 0;
+    background-color: #343a40;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer h5 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #f8f9fa;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #f8f9fa;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+
+/* Flexbox for Footer Row */
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Ensure columns take full width on small screens */
+.footer .col-lg-3,
+.footer .col-lg-2,
+.footer .col-lg-4 {
+    flex: 1 1 100%; /* Each column takes 100% width by default */
+}
+
+.footer .col-lg-3 {
+    max-width: 25%;
+}
+
+.footer .col-lg-2 {
+    max-width: 20%;
+}
+
+.footer .col-lg-4 {
+    max-width: 30%;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .footer .col-lg-3, 
+    .footer .col-lg-2, 
+    .footer .col-lg-4 {
+        flex: 1 1 100%; /* Columns stack on smaller screens */
+    }
+
+    .footer .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Small Device Adjustments */
+@media (max-width: 576px) {
+    .footer .social-icons {
+        justify-content: center;
+    }
+}

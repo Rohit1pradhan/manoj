@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Header</title>
+
+    <!-- Correct usage of static for CSS -->
+    <link rel="stylesheet" href="{% static 'css/header.css' %}"> 
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <a href="/">
+                    <!-- Corrected static path for the image -->
+                    <img src="{% static 'images/logo.png' %}" alt="E-Commerce Logo">
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/shop/">Shop</a></li>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact</a></li>
+                    <li><a href="/cart/" class="cart-icon">
+                        <span class="cart-count">0</span>
+                        <i class="fas fa-shopping-cart"></i>
+                    </a></li>
+                </ul>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search for products...">
+                <button type="submit" id="search-btn">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Include the JS file -->
+    <script src="{% static 'js/headers.js' %}"></script>
+</body>
+</html>

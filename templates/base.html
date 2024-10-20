@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}E-Commerce Website{% endblock %}</title>
+
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!-- You can add any additional CSS or JS files for the base layout here -->
+</head>
+
+<body>
+    <!-- Include Header -->
+    {% include 'header.html' %}
+    
+    <!-- Main content section, specific to each page -->
+    <main>
+        {% block content %}
+        <!-- Default content can go here, or this can be overridden in child templates -->
+        {% endblock %}
+    </main>
+    
+    <!-- Include Footer -->
+    {% include 'footer.html' %}
+    
+    <!-- Optional: Add any JavaScript libraries at the end of the body -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+
+</html>
