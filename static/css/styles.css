@@ -61,3 +61,23 @@ h1 {
     font-weight: bold;
 }
 
+.slider-section {
+    width: 100%; /* Full width for the section */
+    display: flex;
+    justify-content: center; /* Center align the slider */
+    background-color: #f9f9f9; /* Optional background */
+    padding: 20px 0; /* Optional spacing */
+}
+
+.slider {
+    width: 95%; /* Slider takes up 90% of the screen width */
+}
+
+.banner-image {
+    width: 100%; /* Ensure image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners for better aesthetics */
+    display: block;
+    margin: 0 auto;
+}
+

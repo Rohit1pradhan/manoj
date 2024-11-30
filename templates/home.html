@@ -6,17 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - E-Commerce</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />        
 </head>
 <body>
     <!-- Include Header -->
     {% include 'header.html' %}
     
     <!-- Main Content: Product Cards -->
+    <section class="slider-section">
+        <div class="slider">
+            <div>
+                <img src="{% static 'images/banners1.png' %}" alt="Banner 1" class="banner-image">
+            </div>
+            <div>
+                <img src="{% static 'images/banners1.png' %}" alt="Banner 2" class="banner-image">
+            </div>
+            <div>
+                <img src="{% static 'images/banners1.png' %}" alt="Banner 3" class="banner-image">
+            </div>
+        </div>
+    </section>
     <section class="products">
         <div class="container">
             <h2>Featured Products</h2>
             <div class="product-grid" id="product-grid">
-                <!-- Product Cards will be rendered here by JavaScript -->
+                {% include 'product_card.html' %}
             </div>
         </div>
     </section>
@@ -26,6 +41,21 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            dots: true,          // Adds navigation dots
+            infinite: true,      // Loops through slides
+            speed: 500,          // Transition speed in milliseconds
+            slidesToShow: 1,     // Show one slide at a time
+            autoplay: true,      // Enable autoplay
+            autoplaySpeed: 5000, // Auto-scroll every 5 seconds (5000 ms)
+            arrows: true         // Show navigation arrows
+        });
+    });
+</script>
+
     <script>
         // Fetch products from the API and render them on the page
         document.addEventListener('DOMContentLoaded', function() {

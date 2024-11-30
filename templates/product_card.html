@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    
+    <!-- Include your CSS file -->
+    <link rel="stylesheet" href="{% static 'css/product-card.css' %}">
+</head>
+<body>
+
+<!-- Product Card -->
+<div class="product-card">
+    <!-- Image Slider Section -->
+    <div class="image-slider">
+        <div class="image-slide">
+            <img src="https://via.placeholder.com/300x300?text=Product+Image+1" alt="Product Image 1">
+        </div>
+        <div class="image-slide">
+            <img src="https://via.placeholder.com/300x300?text=Product+Image+2" alt="Product Image 2">
+        </div>
+        <div class="image-slide">
+            <img src="https://via.placeholder.com/300x300?text=Product+Image+3" alt="Product Image 3">
+        </div>
+    </div>
+
+    <!-- Product Information -->
+    <div class="product-info">
+        <p class="brand-name">Brand: <span>BrandX</span></p>
+        <h3 class="product-title">Product Title</h3>
+        <div class="price-info">
+            <p class="mrp">MRP: <span>$100</span></p>
+            <p class="price">Price: <span>$80</span></p>
+            <p class="discount">Discount: <span>20%</span></p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer inclusion (You can use your template's footer) -->
+
+<!-- Include your JavaScript file -->
+<script src="{% static 'js/product-card.js' %}"></script>
+
+</body>
+</html>

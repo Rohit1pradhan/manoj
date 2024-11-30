@@ -1,0 +1,95 @@
+/* General Product Card Styling */
+.product-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image Slider Section */
+.image-slider {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-slide {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Product Information Styling */
+.product-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-info .brand-name {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.product-info .product-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.product-info .price-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-info .mrp {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #888;
+}
+
+.product-info .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e60000;
+}
+
+.product-info .discount {
+    font-size: 14px;
+    color: #28a745;
+}
+
+/* Optional: Arrow buttons for sliding */
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.arrow-button.left {
+    left: 10px;
+}
+
+.arrow-button.right {
+    right: 10px;
+}
